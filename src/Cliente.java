@@ -35,4 +35,17 @@ public class Cliente {
             this._saldo-= _carrito.calcularTotal();
         }
     }
+
+    //Calcular el total
+    public double total(){
+     return   _carrito.calcularTotal();
+    }
+    //LLamar a reducirStock del producto del carrito
+    public boolean reduciStock(){
+        if(puedePagar()){
+            return _carrito.reducirStock();
+
+        }
+        return false;
+    }
 }

@@ -61,13 +61,4 @@ public class Producto {
         }
     }
 
-
-
-    //MOSTRAR
-    public void info(){
-        System.out.println("Nombre: "+this._nombre);
-        System.out.println("Precio: "+this._precio);
-        System.out.println("Stock: "+this._stock);
-    }
-
 }

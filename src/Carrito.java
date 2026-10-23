@@ -1,3 +1,5 @@
+import java.lang.classfile.constantpool.DoubleEntry;
+
 public class Carrito {
     private Producto _producto;
     private int _cantidadCarrito;
@@ -37,6 +39,18 @@ public class Carrito {
     //SI no hay productos
     public boolean estaVacio(){
         return  this._cantidadCarrito==0;
+    }
+
+    // Reducir el stock según la cantidad del carrito
+    // Reducir el stock según la cantidad del carrito
+    public boolean reducirStock() {
+        if (_producto.estaDisponible(_cantidadCarrito)) {
+            _producto.reducirStock(_cantidadCarrito);
+            return true;
+        }
+        return false;
+
+
     }
 
 
