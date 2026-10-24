@@ -11,16 +11,28 @@ public class Pedido {
     public double getTotal(){return this._total;}
     public boolean isConfirmado(){return this._confirmado;}
 
+    // Confirma el pedido verificando que el cliente pueda pagar y que se pueda reducir el stock.
     public boolean confirmarPedido() {
+        // Verfica si el cliente tiene dinero suficiente y el carrito no está vacío.
         if (_cliente.puedePagar()) {
             if (!_cliente.reduciStock()) {
                 return false;
             }
+
+            // Guarda el importe total del carrito en el pedido.
             this._total = _cliente.total();
+
+            // Descuenta el importe total del saldo del cliente.
             _cliente.pagar();
+
+            // Marca el pedido como confirmado.
             this._confirmado = true;
+
+            // Indica que el pedido se confirmó correctamente.
             return true;
         }
+
+        // Si el cliente no puede pagar, el pedido no se confirma.
         return false;
     }
 

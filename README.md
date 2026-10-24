@@ -1,51 +1,39 @@
 # 🛒 Tienda Online en Java
 
-Proyecto personal de práctica para aprender y aplicar los fundamentos de la **programación orientada a objetos (POO) con Java**, desarrollando un pequeño sistema de comercio electrónico.
+Proyecto personal para practicar los fundamentos de la **programación orientada a objetos (POO) con Java**, mediante la simulación de una tienda online.
 
-## 📌 Descripción
+## ⚙️ Funcionalidades
 
-El objetivo de este proyecto es simular algunas de las funcionalidades básicas de una tienda online, como la gestión de productos, el control de stock, el carrito de compras y el saldo de los clientes.
+- Gestión de productos, precios y stock.
+- Carrito de compras y cálculo de totales.
+- Gestión del saldo de los clientes.
+- Validación de pagos y disponibilidad de stock.
+- Creación y confirmación de pedidos.
+- Pruebas de compra exitosa, saldo insuficiente y stock insuficiente.
 
-El proyecto se desarrolla progresivamente, incorporando nuevas funcionalidades a medida que avanzo en mi aprendizaje de Java.
+## 🧠 Conceptos aplicados
 
-## ⚙️ Funcionalidades implementadas
+- Clases, objetos y constructores.
+- Encapsulamiento mediante atributos privados.
+- Métodos y separación de responsabilidades.
+- Relaciones entre objetos.
+- Condicionales y lógica de negocio.
+- Validación de datos y excepciones.
 
-- **Productos:** gestión del nombre, precio y stock.
-- **Control de stock:** validación de disponibilidad, reducción y reposición de unidades.
-- **Carrito de compras:** agregar y quitar productos, comprobar cantidades y calcular el total.
-- **Clientes:** gestión del nombre y saldo.
-- **Pagos:** comprobación del saldo disponible antes de realizar un pago.
+## 🛠️ Tecnologías
 
-## 🧠 Conceptos practicados
+Java · IntelliJ IDEA · Git · GitHub
 
-- Clases y objetos.
-- Encapsulación mediante atributos privados.
-- Constructores y métodos.
-- Getters y validación de datos.
-- Excepciones con `IllegalArgumentException`.
-- Relaciones entre clases y reutilización de métodos.
-- Condicionales y operadores lógicos.
-- Separación de responsabilidades entre objetos.
+## 🚧 Estado
 
-## 🛠️ Tecnologías y herramientas
+**Primera versión funcional, en desarrollo.**
 
-- Java
-- IntelliJ IDEA
-- Git
-- GitHub
+Como próximas mejoras, planeo implementar un carrito con múltiples productos, pruebas automatizadas con JUnit y un manejo de errores más robusto.
 
-## 🚧 Estado del proyecto
+## 🎯 Objetivo
 
-**En desarrollo.**
-
-Actualmente estoy trabajando en las clases `Producto`, `Carrito` y `Cliente`.
-
-Las siguientes etapas incluyen la implementación de las clases `Pedido` y `TiendaOnline`, además de las pruebas de funcionamiento e integración del sistema.
-
-## 🎯 Objetivo de aprendizaje
-
-Consolidar mis conocimientos de Java y desarrollar una base sólida en programación orientada a objetos como parte de mi camino hacia el desarrollo backend.
+Consolidar mis conocimientos de Java y POO como parte de mi formación hacia el desarrollo backend.
 
 ---
 
-*Proyecto educativo desarrollado con fines de aprendizaje y práctica.*
+*Proyecto educativo personal.*

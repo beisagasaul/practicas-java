@@ -17,30 +17,30 @@ public class Cliente {
     }
     public double getSaldo(){return this._saldo;}
 
-    //AGRTEGAR SALDO
+    //AGRTEGAR SALDO -> Agrega saldo a la cuenta del cliente
     public void agregarSaldo(double cantidad){
         if(cantidad>0){
             this._saldo+=cantidad;
         }
     }
 
-    //PUEDE PAGAR
+    //PUEDE PAGAR -> ve si puede pagar verificando que su dinero sea igual o mayor a total de productos que hay en el carrito
     public boolean puedePagar(){
         return this._saldo >= _carrito.calcularTotal() && !_carrito.estaVacio();
     }
 
-    //PAGAR
+    //PAGAR ->verifica si puede pagar y si es asi paga resta el dienro
     public void pagar(){
         if(puedePagar()){
             this._saldo-= _carrito.calcularTotal();
         }
     }
 
-    //Calcular el total
+    //Calcular el total -> calcula el totla traido de carrito
     public double total(){
      return   _carrito.calcularTotal();
     }
-    //LLamar a reducirStock del producto del carrito
+    //LLamar a reducirStock del producto del carrito si puede pagar
     public boolean reduciStock(){
         if(puedePagar()){
             return _carrito.reducirStock();
