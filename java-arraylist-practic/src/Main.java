@@ -1,13 +1,21 @@
-//TIP To <b>Run</b> code, press <shortcut actionId="Run"/> or
-// click the <icon src="AllIcons.Actions.Execute"/> icon in the gutter.
-void main() {
-    //TIP Press <shortcut actionId="ShowIntentionActions"/> with your caret at the highlighted text
-    // to see how IntelliJ IDEA suggests fixing it.
-    IO.println(String.format("Hello and welcome!"));
+import java.util.ArrayList;
 
-    for (int i = 1; i <= 5; i++) {
-        //TIP Press <shortcut actionId="Debug"/> to start debugging your code. We have set one <icon src="AllIcons.Debugger.Db_set_breakpoint"/> breakpoint
-        // for you, but you can always add more by pressing <shortcut actionId="ToggleLineBreakpoint"/>.
-        IO.println("i = " + i);
+void main() {
+    ArrayList<Producto> productos = new ArrayList<>();
+
+
+    Producto mouse = new Producto("Mouse Gamer", 150.0);
+    Producto teclado = new Producto("Teclado", 250.0);
+    Producto monitor = new Producto("Monitor", 800.0);
+
+    productos.add(mouse);
+    productos.add(teclado);
+    productos.add(monitor);
+
+    for (Producto producto : productos) {
+        System.out.println(
+                producto.getNombre() + " - " +
+                        producto.getPrecio() + " Bs"
+        );
     }
 }
