@@ -14,4 +14,9 @@ public class Producto {
     public double getPrecio(){
         return this._precio;
     }
+   public void  setNuevoPrecio(double nuevo){
+     if(nuevo>0) {
+         this._precio = nuevo;
+     }
+    }
 }
