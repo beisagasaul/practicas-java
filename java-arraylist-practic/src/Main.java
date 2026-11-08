@@ -2,7 +2,7 @@ import java.util.ArrayList;
 
 void main() {
     ArrayList<Producto> productos = new ArrayList<>();
-
+    Scanner sc=new Scanner(System.in);
 
 
      //INSERTAR
@@ -11,12 +11,48 @@ void main() {
     Producto monitor = new Producto("Monitor", 800.0);
     Producto audifonos = new Producto("Audifonos", 120.0);
     Producto fruta = new Producto("zanahoria",1.50);
+    Producto laptop= new Producto("laptop",4500.0);
 
     productos.add(mouse);
     productos.add(teclado);
     productos.add(monitor);
     productos.add(audifonos);
     productos.add(fruta);
+    productos.add(1,laptop);
+
+
+    //VALIDAR Y AGREGAR
+
+    System.out.print("Ingresa nombre de Producto: ");
+    String nuevo = sc.nextLine();
+    System.out.print("Ingresa el Precio: ");
+    double precio = sc.nextDouble();
+
+
+     //BUSCAR SU YA EXISTE EL PRODUCTO
+    boolean encontrado3 = false;
+
+    for (int i = 0; i < productos.size(); i++) {
+        if (productos.get(i).getNombre().equalsIgnoreCase(nuevo)) {
+            encontrado3 = true;
+            break;
+        }
+    }
+
+    if (encontrado3) {
+        System.out.println("El producto "+ nuevo+ " ya existe " );
+    } else {
+        if(precio<=0){
+            System.out.println("El precio debe ser mayor a 0");
+        }
+        else {
+
+            Producto ProductoNuevo = new Producto(nuevo, precio);
+            productos.add(ProductoNuevo);
+            System.out.println("Registro exitoso");
+        }
+    };
+
 
 
     //LISTA LOS PRODUCTOS
@@ -98,5 +134,5 @@ void main() {
         );
     }
 
- 
+
 }
