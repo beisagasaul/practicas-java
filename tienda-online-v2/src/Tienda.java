@@ -17,8 +17,11 @@ public class Tienda {
 
  //Agregar producto
     public void agregarP(Producto producto){
+
      productos.add(producto);
     }
+
+
     //Listar Productos
     public void listarP(){
      for(Producto producto:productos){
